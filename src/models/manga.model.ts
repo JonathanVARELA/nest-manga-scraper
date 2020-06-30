@@ -1,4 +1,4 @@
-import ChapterModel from "./ChapterModel";
+import ChapterModel from "./chapter.model";
 
 export class MangaModel {
     urlBase64!: string;

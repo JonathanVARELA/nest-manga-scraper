@@ -1,29 +1,29 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import ChapterModel from '../models/ChapterModel';
-import { MangaModel } from '../models/MangaModel';
-import { ScrapperService } from '../services/scrapper.service';
+import ChapterModel from '../models/chapter.model';
+import { MangaModel } from '../models/manga.model';
+import { MangaService } from '../services/manga.service';
 
 @Controller('manga')
 export class MangaController {
-  constructor(private scrapperService: ScrapperService) {}
+  constructor(private mangaService: MangaService) {}
 
   @Get(':mangaUrlBase64')
   getManga(@Param('mangaUrlBase64') mangaUrlBase64: string): Promise<MangaModel> {
-    return this.scrapperService.getManga(mangaUrlBase64);
+    return this.mangaService.getManga(mangaUrlBase64);
   }
 
   @Get(':mangaUrlBase64/chapter')
   getChapter(@Param('mangaUrlBase64') mangaUrlBase64: string): Promise<ChapterModel> {
-    return this.scrapperService.getChapter(mangaUrlBase64);
+    return this.mangaService.getChapter(mangaUrlBase64);
   }
 
   @Get(':mangaUrlBase64/chapter/next')
   getNextChapter(@Param('mangaUrlBase64') mangaUrlBase64: string): Promise<ChapterModel> {
-    return this.scrapperService.getNextChapter(mangaUrlBase64);
+    return this.mangaService.getNextChapter(mangaUrlBase64);
   }
 
-  @Get(':mangaUrlBase64/chapter/is-available')
-  isNextChapterAvailable(@Param('mangaUrlBase64') mangaUrlBase64: string): boolean {
-    return this.scrapperService.isMangaNextChapterAvailable(mangaUrlBase64);
+  @Get(':mangaUrlBase64/chapter/next/is-available')
+  isNextChapterAvailable(@Param('mangaUrlBase64') mangaUrlBase64: string): Promise<MangaModel> {
+    return this.mangaService.isMangaNextChapterAvailable(mangaUrlBase64);
   }
 }
