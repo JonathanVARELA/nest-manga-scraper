@@ -1,5 +1,5 @@
 {
-  "name": "manga-scraper",
+  "name": "manga-parser",
   "version": "0.0.1",
   "description": "Manga Parser is a server used to scrap manga websites",
   "author": "Jonathan VARELA <jonathan.varela29@gmail.com>",
