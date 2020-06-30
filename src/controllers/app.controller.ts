@@ -5,7 +5,7 @@ export class AppController {
   constructor() {}
 
   @Get()
-  getHello(): string {
-    return 'todo';
+  home(): string {
+    return 'Welcome 🥳🍻';
   }
 }
