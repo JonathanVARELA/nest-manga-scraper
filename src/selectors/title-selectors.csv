@@ -1,0 +1,3 @@
+selector
+$("meta[name='twitter:title']").attr("content").replace(/[^\w]+([Mm])(angakakalot.com|anganelo).*/g, '');
+document.querySelector("meta[property='og:title']").getAttribute("content").replace(/( - Free English Webtoon at Mangatx).*/g, '');
