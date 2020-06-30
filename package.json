@@ -1,10 +1,13 @@
 {
   "name": "manga-scrapper",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Manga Parser is a server used to scrap manga websites",
+  "author": "Jonathan VARELA <jonathan.varela29@gmail.com>",
   "private": true,
-  "license": "UNLICENSED",
+  "keywords": [
+    "manga"
+  ],
+  "license": "WTFPL",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -24,9 +27,13 @@
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+    "csv-parser": "^2.3.3",
+    "dotenv": "^8.2.0",
+    "puppeteer": "^4.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.4",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
