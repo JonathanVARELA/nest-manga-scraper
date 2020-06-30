@@ -29,6 +29,7 @@
     "@nestjs/platform-express": "^7.0.0",
     "csv-parser": "^2.3.3",
     "dotenv": "^8.2.0",
+    "helmet": "^3.23.3",
     "puppeteer": "^4.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
